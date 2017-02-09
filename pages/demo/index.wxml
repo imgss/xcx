@@ -1,0 +1,25 @@
+<swiper indicator-dots="true"
+  autoplay="true" interval="3000" duration="200" hidden='{{show}}'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item style='text-align:center'>
+      <image src="{{item}}" class="slide-image" width="375" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<scroll-view scroll-y='true' style='height:{{scrollHeight+"px"}}' bindscroll="hideswiper">
+<view class='wanted' wx:for="{{items}}" wx:for-item="job">
+<view>工作：{{job.job}}</view>
+<view>发布日期：{{job.date}}</view>
+<view>薪资：{{job.salary}}</view>
+<view>地址：{{job.address}}</view>
+<view>联系方式：{{job.connection}}</view>
+</view>
+</scroll-view>
+
+<view class='footer'>
+<view bindtap="wanted" hover='true' hover-class='f66'>招聘</view>
+<view bindtap="sale" hover='true' hover-class='f66'>优惠</view>
+<view bindtap="car" hover='true' hover-class='f66'>拼车</view>
+<view bindtap="bagua" hover='true' hover-class='f66'>八卦</view>
+</view>
