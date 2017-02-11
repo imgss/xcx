@@ -1,4 +1,5 @@
 /* pages/demo/index.wxss */
+@import '/weui.wxss';
 .center {
     text-align: center;
     padding-top:20px;
@@ -26,14 +27,14 @@ scroll-view{
 .footer view:hover{
     background-color:#f66;
 }
-.wanted{
+/*.wanted{
     color:#222;
     border-bottom:#666 1px solid;
     border-radius:10rpx;
     padding:20rpx 20rpx;
     background-color: #ddd;
     margin:20rpx;
-}
+}*/
 .f66{
     background-color:#f66;
 }
@@ -41,8 +42,20 @@ scroll-view{
     float:right;
     margin-right:3px;
     font-size:12px;
+    color:#2f2;
 }
-.job{
-    font-size:20px;
-
+.add{
+    position:fixed;
+    font-weight: bold;
+    color:white;
+    background-color:rgba(255,96,96,0.6);
+    text-align: center;
+    font-size: 40px;
+     line-height:40px;
+    border-radius:50%;
+    vertical-align: middle;
+    width:40px;
+    height:40px;
+    right:20px;
+    bottom:140px;
 }

@@ -1,3 +1,4 @@
+<view class='page'>
 <swiper indicator-dots="true"
   autoplay="true" interval="3000" duration="200" hidden='{{show}}'>
   <block wx:for="{{imgUrls}}">
@@ -6,30 +7,65 @@
     </swiper-item>
   </block>
 </swiper>
-
+<!--招聘视图-->
 <scroll-view scroll-y='true' style='height:{{scrollHeight+"px"}}' bindscroll="hideswiper" wx:if='{{curr_actived=="hire"}}'>
-<view class='wanted' wx:for="{{items}}" wx:for-item="job">
-<view><text class='job'>{{job.job}}</text><text class='date'>{{job.date}}</text></view>
-<view>薪资：{{job.salary}}</view>
-<view>地址：{{job.address}}</view>
-<view>联系方式：{{job.connection}}</view>
+<view class='weui-media-box weui-media-box_text"' wx:for="{{job_items}}" wx:for-item="job">
+    <view>
+        <text class='weui-media-box__title weui-media-box__title_in-text'>{{job.job}}</text>
+        <text class='date'>{{job.date}}</text>
+    </view>
+    <view class="weui-media-box__desc">
+      <view>薪资：{{job.salary}}</view>
+      <view>地址：{{job.address}}</view>
+      <view>联系方式：{{job.connection}}</view>
+    </view>
 </view>
 </scroll-view>
-<scroll-view wx:if='{{curr_actived=="car"}}'>
-<view>车找人</view>
-<view>人找车</view>
+<!--拼车视图-->
+<scroll-view scroll-y='true' style='height:{{scrollHeight+"px"}}' bindscroll="hideswiper" wx:if='{{curr_actived=="car"}}'>
+  <view class='weui-media-box weui-media-box_text"' wx:for="{{car_items}}" wx:for-item="car">
+    <view>
+        <text class='weui-media-box__title weui-media-box__title_in-text'>{{car.info_type==0?'车找人':'人找车'}}</text>
+        <text class='date'>{{car.up_time}}</text>
+    </view>
+    <view class="weui-media-box__desc">
+      <view>目的地：{{car.dest}}</view>
+      <view>出发时间：{{car.go_time}}</view>
+      <view>联系方式：{{car.connection}}</view>
+    </view>
+  </view>
 </scroll-view>
+<!--优惠视图-->
 <scroll-view wx:if='{{curr_actived=="sale"}}'>
-<view>打折了打折了</view>
-<view>快来买啊</view>
+  <view class='weui-media-box weui-media-box_text"' wx:for="{{sale_items}}" wx:for-item="sale">
+    <view>
+        <text class='weui-media-box__title weui-media-box__title_in-text'>{{sale.title}}</text>
+        <text class='date'>{{sale.up_time}}</text>
+    </view>
+    <view class="weui-media-box__desc">
+      <view>持续时间：{{sale.from_time}}--{{sale.to_time}}</view>
+      <view>地点：{{sale.address}}</view>
+      <view>备注：{{sale.tips}}</view>
+    </view>
+  </view>
 </scroll-view>
+<!--八卦视图-->
 <scroll-view wx:if='{{curr_actived=="bagua"}}'>
-<view>八卦板块</view>
-<view>过来聊聊</view>
+<view class='weui-media-box weui-media-box_text"' wx:for="{{bagua_items}}" wx:for-item="bagua">
+    <view>
+        <text class='weui-media-box__title weui-media-box__title_in-text'>{{bagua.title}}</text>
+        <text class='date'>{{bagua.up_time}}</text>
+    </view>
+    <view class="weui-media-box__desc">
+      <view>{{bagua.detail}}</view>
+    </view>
+  </view>
 </scroll-view>
+<view class='add'>+</view>
 <view class='footer'>
 <view bindtap="changeView" hover='true' hover-class='f66' data-type='hire'>招聘</view>
 <view bindtap="changeView" hover='true'  hover-class='f66' data-type='sale'>优惠</view>
 <view bindtap="changeView" hover='true'  hover-class='f66' data-type='car'>拼车</view>
 <view bindtap="changeView" hover='true'  hover-class='f66' data-type='bagua'>八卦</view>
+</view>
 </view>
