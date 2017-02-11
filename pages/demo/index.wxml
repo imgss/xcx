@@ -7,19 +7,29 @@
   </block>
 </swiper>
 
-<scroll-view scroll-y='true' style='height:{{scrollHeight+"px"}}' bindscroll="hideswiper">
+<scroll-view scroll-y='true' style='height:{{scrollHeight+"px"}}' bindscroll="hideswiper" wx:if='{{curr_actived=="hire"}}'>
 <view class='wanted' wx:for="{{items}}" wx:for-item="job">
-<view>工作：{{job.job}}</view>
-<view>发布日期：{{job.date}}</view>
+<view><text class='job'>{{job.job}}</text><text class='date'>{{job.date}}</text></view>
 <view>薪资：{{job.salary}}</view>
 <view>地址：{{job.address}}</view>
 <view>联系方式：{{job.connection}}</view>
 </view>
 </scroll-view>
-
+<scroll-view wx:if='{{curr_actived=="car"}}'>
+<view>车找人</view>
+<view>人找车</view>
+</scroll-view>
+<scroll-view wx:if='{{curr_actived=="sale"}}'>
+<view>打折了打折了</view>
+<view>快来买啊</view>
+</scroll-view>
+<scroll-view wx:if='{{curr_actived=="bagua"}}'>
+<view>八卦板块</view>
+<view>过来聊聊</view>
+</scroll-view>
 <view class='footer'>
-<view bindtap="wanted" hover='true' hover-class='f66'>招聘</view>
-<view bindtap="sale" hover='true' hover-class='f66'>优惠</view>
-<view bindtap="car" hover='true' hover-class='f66'>拼车</view>
-<view bindtap="bagua" hover='true' hover-class='f66'>八卦</view>
+<view bindtap="changeView" hover='true' hover-class='f66' data-type='hire'>招聘</view>
+<view bindtap="changeView" hover='true'  hover-class='f66' data-type='sale'>优惠</view>
+<view bindtap="changeView" hover='true'  hover-class='f66' data-type='car'>拼车</view>
+<view bindtap="changeView" hover='true'  hover-class='f66' data-type='bagua'>八卦</view>
 </view>

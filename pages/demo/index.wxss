@@ -30,10 +30,19 @@ scroll-view{
     color:#222;
     border-bottom:#666 1px solid;
     border-radius:10rpx;
-    padding:5rpx 10rpx;
+    padding:20rpx 20rpx;
     background-color: #ddd;
     margin:20rpx;
 }
 .f66{
     background-color:#f66;
+}
+.date{
+    float:right;
+    margin-right:3px;
+    font-size:12px;
+}
+.job{
+    font-size:20px;
+
 }

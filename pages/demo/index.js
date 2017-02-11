@@ -5,10 +5,17 @@ Page({
     show:0,
     age:"80",
     scrollHeight:'400',
+    title:{
+    hire:'招聘',
+    sale:'打折促销',
+    car:'拼车',
+    bagua:'聊聊八卦'
+    },
+    curr_actived:"hire",
     items:[
-      {date:'2017-1-15',job:'清洁工',salary:'2000',connection:'18817514389',address:'江南大道988号'},{date:'2017-1-15',job:'领快递',salary:'200',connection:'18817514389',address:'前卫'},{date:'2017-1-15',job:'销售员',salary:'2000',connection:'18817514389',address:'江南大道988号'},
-      {date:'2017-1-14',job:'程序员',salary:'8000',connection:'18817514389',address:'一街区'},
-      {date:'2017-1-14',job:'黑车',salary:'200',connection:'18817514389',address:'一街区'}
+      {date:'3小时前',job:'清洁工',salary:'2000',connection:'18817514681',address:'江南大道988号'},{date:'2017-1-15',job:'领快递',salary:'200',connection:'18817518764',address:'前卫'},{date:'2017-1-15',job:'销售员',salary:'2000',connection:'18817512344',address:'江南大道988号'},
+      {date:'2017-1-14',job:'程序员',salary:'8000',connection:'18817514589',address:'一街区'},
+      {date:'2017-1-14',job:'黑车',salary:'200',connection:'18817514689',address:'一街区'}
     ],
 
 
@@ -30,6 +37,7 @@ Page({
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
+    this.data.curr_actived='hire';
   },
   onReady:function(){
     // 页面渲染完成
@@ -60,27 +68,15 @@ Page({
       duration: e.detail.value
     })
   },
-  wanted:function(){
+  changeView:function(e){
+    var e=e.target.dataset.type;
     wx.setNavigationBarTitle({
-      title: '招聘'
+      title: this.data.title[e]
     });
+    this.setData({curr_actived:e});
+    console.log(e,this.data.curr_actived);
   },
-  sale:function(){
-      wx.setNavigationBarTitle({
-        title: '活动优惠'
-      });
-  },
-  car:function(){
-      wx.setNavigationBarTitle({
-        title: '拼车/叫车'
-      });
-  },
-  bagua:function(){
-      wx.setNavigationBarTitle({
-        title: '八卦'
-      });
-  },
-  hideswiper:function(e){
+    hideswiper:function(e){
       console.log(e.detail.scrollTop);
       this.setData({show:1});
       this.setData({scrollHeight:'550'});
