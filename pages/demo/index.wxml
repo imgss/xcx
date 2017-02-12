@@ -61,11 +61,13 @@
     </view>
   </view>
 </scroll-view>
-<view class='add'>+</view>
+<!--发布信息-->
+<view class='add' hover='true' hover-class='f66' bindtap='add' hover-start-time="50" hover-stay-time="300">+</view>
+<!--footer-->
 <view class='footer'>
-<view bindtap="changeView" hover='true' hover-class='f66' data-type='hire'>招聘</view>
-<view bindtap="changeView" hover='true'  hover-class='f66' data-type='sale'>优惠</view>
-<view bindtap="changeView" hover='true'  hover-class='f66' data-type='car'>拼车</view>
-<view bindtap="changeView" hover='true'  hover-class='f66' data-type='bagua'>八卦</view>
+<view bindtap="changeView" hover='true' hover-class='f66' data-type='hire' style='background-color:{{curr_actived=="hire"?"#f66":"#529"}}'>招聘</view>
+<view bindtap="changeView" hover='true'  hover-class='f66' data-type='sale' style='background-color:{{curr_actived=="sale"?"#f66":"#529"}}'>优惠</view>
+<view bindtap="changeView" hover='true'  hover-class='f66' data-type='car' style='background-color:{{curr_actived=="car"?"#f66":"#529"}}'>拼车</view>
+<view bindtap="changeView" hover='true'  hover-class='f66' data-type='bagua' style='background-color:{{curr_actived=="bagua"?"#f66":"#529"}}'>八卦</view>
 </view>
 </view>

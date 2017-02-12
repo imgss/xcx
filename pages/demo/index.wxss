@@ -37,6 +37,7 @@ scroll-view{
 }*/
 .f66{
     background-color:#f66;
+    opacity: 1;
 }
 .date{
     float:right;
@@ -44,11 +45,14 @@ scroll-view{
     font-size:12px;
     color:#2f2;
 }
+.actived{
+    background-color: f66;
+}
 .add{
     position:fixed;
     font-weight: bold;
     color:white;
-    background-color:rgba(255,96,96,0.6);
+    background-color:rgba(20,96,96,0.6);
     text-align: center;
     font-size: 40px;
      line-height:40px;
