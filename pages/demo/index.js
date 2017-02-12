@@ -14,7 +14,7 @@ Page({
     curr_actived:"hire",
     prev_actived:null,
     job_items:[
-      {date:'3小时前',job:'清洁工',salary:'2000',connection:'18817514681',address:'江南大道988号'},{date:'2017-1-15',job:'领快递',salary:'200',connection:'18817518764',address:'前卫'},{date:'2017-1-15',job:'销售员',salary:'2000',connection:'18817512344',address:'江南大道988号'},
+      {date:'3小时前',job:'清洁工',salary:'2000',connection:'18817514681',address:'江南大道1111号'},{date:'2017-1-15',job:'领快递',salary:'200',connection:'18817518764',address:'前卫'},{date:'2017-1-15',job:'销售员',salary:'2000',connection:'18817512344',address:'江南大道1111号'},
       {date:'2017-1-14',job:'程序员',salary:'8000',connection:'18817514589',address:'一街区'},
       {date:'2017-1-14',job:'黑车',salary:'200',connection:'18817514689',address:'一街区'}
     ],

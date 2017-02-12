@@ -1,1 +1,7 @@
-{}
+{
+    "navigationBarBackgroundColor": "#ccc",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "发布",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+  }
