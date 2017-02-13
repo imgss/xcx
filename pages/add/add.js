@@ -5,7 +5,13 @@ Page({
         tabs: ["招聘", "优惠", "拼车","八卦"],
         activeIndex: 0,
         sliderOffset: 0,
-        sliderLeft: 0
+        sliderLeft: 0,
+        hire_info:{
+            name:'',
+            address:'',
+            salary:0,
+            connection:''
+        }
     },
     onLoad: function () {
         var that = this;
@@ -23,5 +29,8 @@ Page({
             sliderOffset: e.currentTarget.offsetLeft,
             activeIndex: e.currentTarget.id
         });
+    },
+    submit_hire:function(){
+
     }
 });

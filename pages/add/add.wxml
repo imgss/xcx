@@ -90,7 +90,7 @@
         </view>
         <view class="weui-cells__tips">请确保信息真实有效</view>
                 
-                <button class="weui-btn" type="primary">发布</button>
+                <button class="weui-btn" type="primary" bindtap='submit_hire'>发布</button>
                 
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>

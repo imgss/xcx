@@ -4,19 +4,10 @@ var app = getApp()
 Page({
   data: {
     motto: 'hello',
-    userInfo: {}
+    userInfo: {},
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../demo/index'
-    })
-  },
-  changeColor:function(){
-this.setData({
-      motto: 'MINA'
-    })
-    },
+
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -26,6 +17,11 @@ this.setData({
       that.setData({
         userInfo:userInfo
       })
+      setTimeout(function(){
+             wx.navigateTo({
+          url: '../demo/index'
+        });
+    },2000);
     })
   }
 })
