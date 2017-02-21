@@ -18,7 +18,7 @@ Page({
         userInfo:userInfo
       })
       setTimeout(function(){
-             wx.navigateTo({
+             wx.redirectTo({
           url: '../demo/index'
         });
     },2000);

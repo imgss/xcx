@@ -11,91 +11,170 @@
             </view>
             <view class="weui-tab__panel">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-                 <view class="weui-cells__title">发布招聘信息</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">职位名称</view>
-                    </view>
-                    <view class="weui-cell__bd">
-                        <input class="weui-input" placeholder="请输入职位"/>
-                    </view>
-            </view>
-            <view class="weui-cell weui-cell_input">
-                    <view class="weui-cell__hd">
-                        <view class="weui-label">性质</view>
+                    <view class="weui-cells__title">发布招聘信息</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">职位名称</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入职位" />
+                            </view>
                         </view>
-                    <view class="weui-cell__bd">
-                        <input class="weui-input" placeholder="兼职/全职"/>
-                    </view>
-            </view>
-                <view class="weui-cell weui-cell_input">
-                    <view class="weui-cell__hd">
-                        <view class="weui-label">工作地址</view>
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">性质</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="兼职/全职" />
+                            </view>
                         </view>
-                    <view class="weui-cell__bd">
-                        <input class="weui-input" placeholder="请输入地址"/>
-                    </view>
-            </view>
-            
-            <view class="weui-cell weui-cell_input">
-                    <view class="weui-cell__hd">
-                        <view class="weui-label">薪资</view>
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">工作地址</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入地址" />
+                            </view>
                         </view>
-                    <view class="weui-cell__bd">
-                        <input class="weui-input" placeholder="请输入薪资"/>
+
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">薪资</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入薪资" />
+                            </view>
+                        </view>
+                        <view class="weui-cell weui-cell_input ">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">联系方式</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入手机号" />
+                            </view>
+                            <view class="weui-cell__ft">
+                                <view class="weui-vcode-btn">获取验证码</view>
+                            </view>
+                        </view>
                     </view>
-            </view>
-            <view class="weui-cell weui-cell_input ">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">联系方式</view>
+                    <view class="weui-cells__tips">请确保信息真实有效</view>
+                    <button class="weui-btn" type="primary" bindtap='submit_hire'>发布</button>
                 </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" placeholder="请输入手机号" />
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view class="weui-cells__title">发布优惠信息</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">优惠活动</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" />
+                            </view>
+                        </view>
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">日期</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" />
+                            </view>
+                        </view>
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">地址</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入地址" />
+                            </view>
+                        </view>
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">持续</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入持续时间" />
+                            </view>
+                        </view>
+                        <view class="weui-cell weui-cell_input ">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">联系方式</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入手机号" />
+                            </view>
+                            <view class="weui-cell__ft">
+                                <view class="weui-vcode-btn">获取验证码</view>
+                            </view>
+                        </view>
+                        <button class="weui-btn" type="primary" bindtap='submit_sale'>发布</button>
+                    </view>
                 </view>
-                <view class="weui-cell__ft">
-                    <view class="weui-vcode-btn">获取验证码</view>
+                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                    <view class="weui-cells__title">发布拼車信息</view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">目的地</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" />
+                            </view>
+                        </view>
+                       
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">出发时间</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" />
+                            </view>
+                        </view>
+                         <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__hd">
+                                <view class=" weui-label">车找人</view>
+                                <view class=" weui-label">人找车</view>
+                            </view>
+                            <view class="wweui-cell__bd">
+                                <switch checked style="position:realtive;right:200px;" />
+                            </view>
+                        </view>
+                        <view class="weui-cell weui-cell_input ">
+                            <view class="weui-cell__hd">
+                                <view class="weui-label">联系方式</view>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入手机号" />
+                            </view>
+                            <view class="weui-cell__ft">
+                                <view class="weui-vcode-btn">获取验证码</view>
+                            </view>
+                        </view>
+                        <button class="weui-btn" type="primary" bindtap='submit_sale'>发布</button>
+                    </view>
                 </view>
-            </view>
-            <!--<view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">日期</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-                        <view class="weui-input">{{date}}</view>
-                    </picker>
-                </view>
-            </view>-->
-            <!--<view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">时间</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-                        <view class="weui-input">{{time}}</view>
-                    </picker>
-                </view>
-            </view>-->
-            <!--<view class="weui-cell weui-cell_input weui-cell_vcode">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">验证码</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" placeholder="请输入验证码" />
-                </view>
-                <view class="weui-cell__ft">
-              </view>
-            </view>-->
+                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                                        <view class="weui-cells__title">发布八卦</view>
+<view class=" weui-label">标题：</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd ">
+            <input class="weui-input" placeholder="请输入标题" />
         </view>
-        <view class="weui-cells__tips">请确保信息真实有效</view>
-                
-                <button class="weui-btn" type="primary" bindtap='submit_hire'>发布</button>
-                
+    </view>
+</view>
+
+<view class=" weui-label">摘要：</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="请输入文本" style="height: 10em" />
+            <view class="weui-textarea-counter">0/500</view>
+        </view>
+    </view>
+</view>
+<button class="weui-btn" type="primary" bindtap='submit_sale'>发布</button>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
-                 <view class="weui-tab__content" hidden="{{activeIndex != 3}}">发布八卦</view>
             </view>
         </view>
     </view>
